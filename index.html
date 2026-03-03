@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web player: Music for everyone</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+      <!-- LEFT: Logo + Home -->
+      <div class="nav-left">
+        <img class="img" src="logo.png" alt="Spotify Logo" />
+        <button class="img-button">
+          <img class="img2" src="home.svg" alt="Home" />
+        </button>
+      </div>
+
+      <!-- CENTER: Search Bar -->
+      <div class="nav-centre">
+        <div class="search-box">
+          <img class="search-icon" src="search.svg" alt="Search" />
+          <input type="text" placeholder="What do you want to play?" />
+          <div class="divider"></div>
+          <button class="restore-btn"><i class="fa-solid fa-window-restore"></i></button>
+        </div>
+      </div>
+
+      <!-- RIGHT: Buttons -->
+      <div class="nav-right">
+        <a href="#">Premium</a>
+        <a href="#">Support</a>
+        <a href="#">Download</a>
+        <div class="class-divider"></div>
+        <button class="install-button">
+          <i class="fa-solid fa-download"></i>
+          Install App
+        </button>
+        <button class="signup-btn">Sign up</button>
+        <button class="login-btn">Log in</button>
+      </div>
+
+    </div>
+    <!-- END NAVBAR -->
+
+    <!-- MAIN — sidebar + content -->
+    <div class="main">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+
+        <!-- Top Nav -->
+        <div class="nav">
+          <div class="nav-logo">
+            <i class="fa-solid fa-bookmark"></i>
+            <h4>Your Library</h4>
+          </div>
+          <div class="nav-actions">
+            <button class="icon-btn" title="Create playlist">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button class="icon-btn" title="Expand">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="filter-pills">
+          <button class="pill active">Playlists</button>
+          <button class="pill">Podcasts</button>
+          <button class="pill">Albums</button>
+        </div>
+
+        <!-- Search & Sort -->
+        <div class="search-sort-bar">
+          <button class="icon-btn small">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <span class="sort-label">
+            Recents <i class="fa-solid fa-list"></i>
+          </span>
+        </div>
+
+        <!-- Library List -->
+        <div class="library-list">
+          <div class="promo-card">
+            <p class="promo-title">Create your first playlist</p>
+            <p class="promo-sub">It's easy, we'll help you</p>
+            <button class="promo-btn">Create playlist</button>
+          </div>
+          <div class="promo-card">
+            <p class="promo-title">Let's find some podcasts to follow</p>
+            <p class="promo-sub">We'll keep you updated on new episodes</p>
+            <button class="promo-btn">Browse podcasts</button>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="sidebar-footer">
+          <a href="#">Cookies</a>
+          <a href="#">Privacy</a>
+          <a href="#">About</a>
+        </div>
+
+      </div>
+      <!-- END SIDEBAR -->
+
+      <!-- MAIN CONTENT -->
+      <div class="main_content">
+        <div class="heading"><h2>Trending songs</h2></div>
+        <div class="card_content">
+
+          <div class="card" data-song="song1.mp3" data-img="img1.jpg" data-title="Dil Ka Jo Haal Hai (Lyrical)" data-artist="| Besharam | Ranbir Kapoor | Abhijeet Bhattacharya, Shreya Ghoshal">
+            <img src="img1.jpg" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Dil Ka Jo Haal Hai (Lyrical)</h3>
+            <p>| Besharam | Ranbir Kapoor | Abhijeet Bhattacharya, Shreya Ghoshal</p>
+          </div>
+
+          <div class="card" data-song="song2(256k).mp3" data-img="img2.png" data-title="Tere Liye - Lyrical" data-artist="| Vivek Oberoi | Atif Aslam, Shreya Ghoshal |">
+            <img src="img2.png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Tere Liye - Lyrical </h3>
+            <p>| Vivek Oberoi | Atif Aslam, Shreya Ghoshal |</p>
+          </div>
+
+          <div class="card" data-song="song3(256k).mp3" data-img="img3.png" data-title="Haule Haule - Fullsong" data-artist="| Shah Rukh Khan | Anushka Sharma | Sukhwinder Singh">
+            <img src="img3.png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Haule Haule - Full song</h3>
+            <p>| Shah Rukh Khan | Anushka Sharma | Sukhwinder Singh</p>
+          </div>
+
+          <div class="card" data-song="song4(256k).mp3" data-img="img4.png" data-title="Tumse Milke Dilka Jo Haal" data-artist="| Main Hoon Na | Shahrukh Khan">
+            <img src="img4.png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Tumse Milke Dilka Jo Haal [Full Song] </h3>
+            <p>| Main Hoon Na | Shahrukh Khan</p>
+          </div>
+
+          <div class="card" data-song="song_5(256k).mp3" data-img="img5.png" data-title="Jugraafiya" data-artist="| Hrithik Roshan & Mrunal Thakur | Udit Narayan & Shreya Ghoshal">
+            <img src="img5.png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Jugraafiya</h3>
+            <p>| Super 30 | Hrithik Roshan & Mrunal Thakur | Udit Narayan & Shreya Ghoshal</p>
+          </div>
+
+          <div class="card" data-song="song6(256k).mp3" data-img="img6.png" data-title="Janiye | Music" data-artist="| Vishal Mishra, Rashmeet Kaur|">
+            <img src="img6.png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Janiye | Music</h3>
+            <p>| Chor Nikal Ke Bhaga | Vishal Mishra, Rashmeet Kaur|</p>
+          </div>
+          <div class="card" data-song="song9(256k).mp3" data-img="img9.png" data-title="Finding Her (Jana Mere Sawalon Ka Manzar Tu)" data-artist="Kushagra | Vanshika | Bharath | Karan Maini |UR Debut">
+            <img src="img9.png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Finding Her (Jana Mere Sawalon Ka Manzar Tu)</h3>
+            <p>Kushagra | Vanshika | Bharath | Karan Maini |UR Debut</p>
+          </div>
+         <div class="card" data-song="song7(256k).mp3" data-img="img7.png" data-title="Mann Mera - " data-artist="Rajeev Khandelwal & Tina Desai | Gajendra Verma">
+            <img src="img7.png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Mann Mera - Official</h3>
+            <p>| Rajeev Khandelwal & Tina Desai | Gajendra Verma</p>
+          </div>
+          <div class="card" data-song="song8(256k).mp3" data-img="img8.png" data-title="Ambarsariya (Lyrical) " data-artist="| Sona Mohapatra | Pulkit Samrat, Priya Anand | Ram Sampath">
+            <img src="img8.png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Ambarsariya (Lyrical)  </h3>
+            <p> Sona Mohapatra | Pulkit Samrat, Priya Anand | Ram Sampath</p>
+          </div>
+          <div class="card" data-song="song10(256k).mp3" data-img="img26 (10).png" data-title="Churake -" data-artist=" Vilen X Kanika Kapoor (Official)">
+            <img src="img26 (10).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Churake - </h3>
+            <p>Vilen X Kanika Kapoor (Official Video)</p>
+          </div>
+          <div class="card" data-song="song11(256k).mp3" data-img="img26 (11).png" data-title="Jo Tere Sang - Blood Money " data-artist=" Kunal Khemu, Amrita Puri | Mustafa Zahid | Jeet Gannguli">
+            <img src="img26 (11).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Jo Tere Sang - Blood Money</h3>
+            <p>| Kunal Khemu, Amrita Puri | Mustafa Zahid | Jeet Gannguli</p>
+          </div>
+          <div class="card" data-song="song12(256k).mp3" data-img="img26 (12).png" data-title="Oh Oh Jane Jaana/Salman Khan Full Song " data-artist="Pyaar Kiya Toh Darna Kya">
+            <img src="img26 (12).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>"Oh Oh Jane Jaana" Salman Khan Full Song  </h3>
+            <p>Full Song | Pyaar Kiya Toh Darna Kya</p>
+          </div>
+          <div class="card" data-song="song13.mp3" data-img="img26 (13).png" data-title="Jaane Na Tu" data-artist=" Bhoomi | Almost Loved - EP | UR Debut">
+            <img src="img26 (13).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Jaane Na Tu (Official Music)</h3>
+            <p> Bhoomi | Almost Loved - EP | UR Debut</p>
+          </div>
+          <div class="card" data-song="song14.mp3" data-img="img26 (14).png" data-title="Ucha Lamba Kad:" data-artist="| Akshay Kumar | Katrina Kaif | Nana Patekar | Anil Kapoor | Bollywood Song">
+            <img src="img26 (14).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Ucha Lamba Kad</h3>
+            <p>| Akshay Kumar | Katrina Kaif | Nana Patekar | Anil Kapoor | Bollywood Song</p>
+          </div>
+          <div class="card" data-song="song15.mp3" data-img="img26 (15).png" data-title="Falak Tak Song | Tashan |" data-artist="Akshay Kumar, Kareena Kapoor, Udit Narayan, Mahalaxmi Iyer, Vishal-Shekhar">
+            <img src="img26 (15).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Falak Tak Song | Tashan |  </h3>
+            <p>Akshay Kumar, Kareena Kapoor, Udit Narayan, Mahalaxmi Iyer, Vishal-Shekhar</p>
+          </div>
+          <div class="card" data-song="song16(256k).mp3" data-img="img26 (16).png" data-title="Jhol | Coke Studio Pakistan" data-artist="| Coke Studio Pakistan | Season 15 | Maanu x Annural Khalid">
+            <img src="img26 (16).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Jhol | Coke Studio Pakistan </h3>
+            <p>| Coke Studio Pakistan | Season 15 | Maanu x Annural Khalid</p>
+          </div>
+          <div class="card" data-song="song18(256k).mp3" data-img="img18.jpg" data-title="Kiya Kiya | Full Audio" data-artist="| Akshay Kumar, Katrina Kaif, Nana Patekar, Anil Kapoor">
+            <img src="img18.jpg" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Kiya Kiya | Full Audio </h3>
+            <p>| Akshay Kumar, Katrina Kaif, Nana Patekar, Anil Kapoor</p>
+          </div>
+          <div class="card" data-song="song17(256k).mp3" data-img="img26 (17).png" data-title="SAFAR (Official song)" data-artist="Juss x MixSingh">
+            <img src="img26 (17).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>SAFAR (Official song)</h3>
+            <p>Juss x MixSingh</p>
+          </div>
+          <div class="card" data-song="song19(256k).mp3" data-img="img26 (19).png" data-title="" data-artist="|Abhijeet,Shreya Ghosal|Shahrukh Khan,Sushmita Sen">
+            <img src="img26 (19).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Tumhe Jo Maine Dekha Lyrical </h3>
+            <p>|Abhijeet,Shreya Ghosal|Shahrukh Khan,Sushmita Sen</p>
+          </div>
+          <div class="card" data-song="song20.mp3" data-img="img26 (20).png" data-title=" Humdum (Music)" data-artist="Aditya Rikhari -(Music Video) | Romantic Song">
+            <img src="img26 (20).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3> Humdum (Music) </h3>
+            <p>Aditya Rikhari -(Music) | Romantic Song</p>
+          </div>
+           <div class="card" data-song="song21.mp3" data-img="img26 (21).png" data-title="" data-artist="- Mr. X In Bombay - Kishore Kumar's Greatest Hits - Old Songs">
+            <img src="img26 (21).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Mere Mehboob Qayamat Hogi  (Original) </h3>
+            <p>- Mr. X In Bombay - Kishore Kumar's Greatest Hits - Old Songs</p>
+          </div>
+           <div class="card" data-song="song22(256k)(2).mp3" data-img="img26 (22).png" data-title="Neele neele ambar par Chand jab aaye" data-artist="..#kishorekumar #kishorekumarsong  beautiful song by kishore">
+            <img src="img26 (22).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Neele neele ambar par Chand jab aaye</h3>
+            <p>..#kishorekumar #kishorekumarsong  beautiful song by kishore</p>
+          </div>
+           <div class="card" data-song="song24(256k).mp3" data-img="img26 (23).png" data-title="Itna Na Mujhse Tu Pyaar Badha" data-artist="| Chhaya(1961) | Lata Mangeshkar | Sunil D, Asha P">
+            <img src="img26 (23).png" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Itna Na Mujhse Tu Pyaar Badha (Duet)</h3>
+            <p>| Chhaya(1961) | Lata Mangeshkar | Sunil D, Asha P</p>
+          </div>
+           <div class="card" data-song="song25.mp3" data-img="img7.png" data-title="" data-artist=" Shamita Shetty, Asha Bhosle, Jeet-Pritam, Javed Akhtar">
+            <img src="img25.jpg" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Sharara Full Song |</h3>
+            <p> Shamita Shetty, Asha Bhosle, Jeet-Pritam, Javed Akhtar</p>
+          </div>
+           <div class="card" data-song="song26(256k).mp3" data-img="img26.png" data-title="ekhne Walon Ne Kya Kay Nahi Dekha Hoga" data-artist="| Salman Khan, Rani Mukherjee |">
+            <img src="img26.jpg" alt="Song Art">
+            <div class="player-slider">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <h3>Dekhne Walon Ne Kya Kay Nahi Dekha Hoga  </h3>
+            <p>Salman Khan, Rani Mukherjee | Chori Chori Chupke Chupke</p>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN -->
+
+    <!-- ====== MUSIC PLAYER (Fixed Bottom Bar) ====== -->
+    <div class="music-player">
+
+      <!-- LEFT: Song Info -->
+      <div class="song-info">
+        <img src="song-cover.jpg" id="masterImg" alt="Cover" />
+        <div>
+          <h4 id="masterSongName">Song Name</h4>
+          <p id="masterArtistName">Artist</p>
+        </div>
+      </div>
+
+      <!-- CENTER: Controls + Song Seek Bar -->
+      <div class="player-controls">
+        <div class="controls-row">
+          <i class="fas fa-shuffle"></i>
+          <i class="fas fa-backward" id="prevBtn"></i>
+          <i class="fas fa-play-circle play-btn" id="mainPlayBtn"></i>
+          <i class="fas fa-forward" id="nextBtn"></i>
+          <i class="fas fa-repeat"></i>
+        </div>
+        <!-- Song Progress / Seek Bar -->
+        <div class="seek-row">
+          <span id="currentTime">0:00</span>
+          <input type="range" id="songSeekBar" min="0" max="100" value="0" />
+          <span id="totalTime">0:00</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Volume Controls -->
+      <div class="player-tools">
+        <i class="fas fa-list-ul"></i>
+        <i class="fas fa-volume-up" id="volumeIcon"></i>
+        <input type="range" id="myProgressBar" min="0" max="100" value="80" />
+      </div>
+
+    </div>
+    <!-- END MUSIC PLAYER -->
+
+    <audio id="audioPlayer"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
