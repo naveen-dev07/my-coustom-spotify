@@ -201,6 +201,7 @@ body {
   cursor: pointer;
   transition: transform 0.1s, background-color 0.15s;
   white-space: nowrap;
+  transition: 0.25s;
 }
 
 .login-btn:hover {
@@ -755,6 +756,46 @@ body {
 .bottom-nav-item i { font-size: 20px; }
 .bottom-nav-item.active, .bottom-nav-item:hover { color: white; }
 
+ .card p {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.card:hover p {
+  animation: marquee 4s linear infinite;
+}
+.song-info p {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.song-info:hover p {
+  animation: marquee 6s linear infinite;
+}
+ .card p {
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%
+  );
+}
+  .card-text {
+  overflow: hidden;
+  width: 100%;
+}
+
 /* ===== TABLET (768px) ===== */
 @media (max-width: 768px) {
   .sidebar { width: 220px; }
@@ -804,4 +845,24 @@ body {
   .seek-row span { font-size: 10px; min-width: 26px; }
   .player-tools { display: none; }
   .bottom-nav { display: flex; }
+ 
+.card p {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.active-card p {
+  animation: marquee 4s linear infinite;
+}
+
+.song-info p {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 6s linear infinite;
+}
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
